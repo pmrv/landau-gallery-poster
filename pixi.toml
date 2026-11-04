@@ -1,0 +1,38 @@
+[workspace]
+name = "landau-gallery-poster"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+seaborn = "*"
+pyarrow = ">=26.0.0,<27"
+ase = ">=3.23"
+phonopy = ">=3,<4.9"
+structuretoolkit = "*"
+sqsgenerator = "*"
+jupyterlab = "*"
+ipykernel = "*"
+nbconvert = "*"
+
+[pypi-dependencies]
+landau = { version = "==1.18.0", extras = ["ase", "phonopy", "fast-tsp"] }
+
+[activation.env]
+OMP_NUM_THREADS = "1"
+OPENBLAS_NUM_THREADS = "1"
+
+[tasks]
+lab = "jupyter lab"
+intro = { cmd = "jupyter nbconvert --to notebook --execute --inplace MgCa_Phasediagram_Construction.ipynb", cwd = "Intro" }
+ideal = { cmd = "jupyter nbconvert --to notebook --execute --inplace Ideal_Solution.ipynb", cwd = "Ideal" }
+point = { cmd = "jupyter nbconvert --to notebook --execute --inplace Point_Defects_Exact.ipynb", cwd = "Point" }
+solid-gas = { cmd = "jupyter nbconvert --to notebook --execute --inplace Solid_Gas_ASE.ipynb", cwd = "Ase" }
+sublimation = { cmd = "jupyter nbconvert --to notebook --execute --inplace Sublimation_ASE.ipynb", cwd = "Ase" }
+cupt = { cmd = "jupyter nbconvert --to notebook --execute --inplace cupt_ordering.ipynb", cwd = "CuPt" }
+mgca = { cmd = "jupyter nbconvert --to notebook --execute --inplace MgCa_Phasediagram_Full.ipynb", cwd = "RealWorld" }
+aucu = { cmd = "jupyter nbconvert --to notebook --execute --inplace AuCu_Phasediagrams.ipynb", cwd = "RealWorld" }
+all = { depends-on = ["intro", "ideal", "point", "solid-gas", "sublimation", "cupt", "mgca", "aucu"] }
