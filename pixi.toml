@@ -17,6 +17,7 @@ sqsgenerator = "*"
 jupyterlab = "*"
 ipykernel = "*"
 nbconvert = "*"
+librsvg = "*"
 
 [pypi-dependencies]
 landau = { version = "==1.18.0", extras = ["ase", "phonopy", "fast-tsp"] }
@@ -34,4 +35,5 @@ solid-gas = { cmd = "jupyter nbconvert --to notebook --execute --inplace Solid_G
 cupt = { cmd = "jupyter nbconvert --to notebook --execute --inplace cupt_ordering.ipynb", cwd = "CuPt" }
 mgca = { cmd = "jupyter nbconvert --to notebook --execute --inplace MgCa_Phasediagram_Full.ipynb", cwd = "RealWorld" }
 aucu = { cmd = "jupyter nbconvert --to notebook --execute --inplace AuCu_Phasediagram.ipynb", cwd = "RealWorld" }
+poster = "python poster/build_poster.py"
 all = { depends-on = ["intro", "ideal", "point", "solid-gas", "cupt", "mgca", "aucu"] }

@@ -20,4 +20,5 @@ Install [pixi](https://pixi.sh), then:
 pixi run lab      # open the notebooks in JupyterLab
 pixi run all      # re-run every notebook
 pixi run ideal    # re-run one notebook; see pixi.toml for the names
+pixi run poster   # rebuild poster/landau_poster.pdf from the figures
 ```
