@@ -7,11 +7,10 @@ The notebooks behind the figures on the [landau](https://github.com/eisenforschu
 | `Intro/MgCa_Phasediagram_Construction.ipynb` | How a phase diagram is built from free energies |
 | `Ideal/Ideal_Solution.ipynb` | The simplest binary phase diagram and a 1D cut |
 | `Ase/Solid_Gas_ASE.ipynb` | Phases from ASE thermochemistry |
-| `Ase/Sublimation_ASE.ipynb` | A sublimation curve from ASE (not on the poster) |
 | `Point/Point_Defects_Exact.ipynb` | A compound with point defects |
 | `CuPt/cupt_ordering.ipynb` | From structures and phonons to a phase diagram, and colouring phase fields |
 | `RealWorld/MgCa_Phasediagram_Full.ipynb` | The full Mg–Ca diagram |
-| `RealWorld/AuCu_Phasediagrams.ipynb` | Au–Cu from three DFT functionals |
+| `RealWorld/AuCu_Phasediagram.ipynb` | The Au–Cu diagram |
 
 ## Running
 

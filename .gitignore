@@ -3,16 +3,3 @@
 .ipynb_checkpoints/
 __pycache__/
 .claude/
-
-# local shell and editor config
-.bashrc
-.bash_profile
-.gitconfig
-.gitmodules
-.idea
-.mcp.json
-.profile
-.ripgreprc
-.vscode
-.zprofile
-.zshrc

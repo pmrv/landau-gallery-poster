@@ -31,8 +31,7 @@ intro = { cmd = "jupyter nbconvert --to notebook --execute --inplace MgCa_Phased
 ideal = { cmd = "jupyter nbconvert --to notebook --execute --inplace Ideal_Solution.ipynb", cwd = "Ideal" }
 point = { cmd = "jupyter nbconvert --to notebook --execute --inplace Point_Defects_Exact.ipynb", cwd = "Point" }
 solid-gas = { cmd = "jupyter nbconvert --to notebook --execute --inplace Solid_Gas_ASE.ipynb", cwd = "Ase" }
-sublimation = { cmd = "jupyter nbconvert --to notebook --execute --inplace Sublimation_ASE.ipynb", cwd = "Ase" }
 cupt = { cmd = "jupyter nbconvert --to notebook --execute --inplace cupt_ordering.ipynb", cwd = "CuPt" }
 mgca = { cmd = "jupyter nbconvert --to notebook --execute --inplace MgCa_Phasediagram_Full.ipynb", cwd = "RealWorld" }
-aucu = { cmd = "jupyter nbconvert --to notebook --execute --inplace AuCu_Phasediagrams.ipynb", cwd = "RealWorld" }
-all = { depends-on = ["intro", "ideal", "point", "solid-gas", "sublimation", "cupt", "mgca", "aucu"] }
+aucu = { cmd = "jupyter nbconvert --to notebook --execute --inplace AuCu_Phasediagram.ipynb", cwd = "RealWorld" }
+all = { depends-on = ["intro", "ideal", "point", "solid-gas", "cupt", "mgca", "aucu"] }
